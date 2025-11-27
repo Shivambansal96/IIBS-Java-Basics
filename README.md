@@ -5,7 +5,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active%20Learning-success?style=for-the-badge)
 ![Students](https://img.shields.io/badge/IIBS-Students-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-50%25-orange?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-60%25-orange?style=for-the-badge)
 
 ### 🚀 *Master Java Programming from Scratch!*
 
@@ -55,7 +55,7 @@ Test your knowledge
 
 ```
 Completed Topics:
-████████████████░░░░░░░░░░░░░░░░ 50%
+████████████████████░░░░░░░░░░░░ 60%
 
 ✅ JDK, JRE & JVM
 ✅ Output Methods
@@ -64,11 +64,11 @@ Completed Topics:
 ✅ User Input (Scanner)
 ✅ Operators
 ✅ Conditional Statements
+✅ Strings & Characters
+🟡 HackerRank Challenges (Started)
 ⏳ Loops
-⏳ Strings & Characters
 ⏳ Arrays
 ⏳ Functions/Methods
-⏳ HackerRank Challenges
 ```
 
 ---
@@ -98,6 +98,15 @@ graph LR
 ```
 
 ---
+
+## 🔬 Fundamentals
+
+- **Completed:** `JDK, JRE & JVM`, `Output Methods`, `Variables`, `Data Types`, `User Input (Scanner)`, `Operators`, `Conditional Statements`, `Strings & Characters`
+- **In Progress:** `Loops`
+- **Planned:** `Arrays`, `Functions/Methods`, `HackerRank Challenges` (started)
+
+> Quick intro: These fundamentals are the building blocks. Focus on writing small programs that combine multiple topics (e.g., use Scanner + Operators + Conditionals).
+
 
 ## 📚 Topics Covered
 
@@ -585,16 +594,6 @@ Enter your choice:
 <img src="https://img.icons8.com/fluency/96/loop.png" width="60"><br>
 <b>Loops</b><br>
 <sub>for, while, do-while</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://img.icons8.com/fluency/96/text.png" width="60"><br>
-<b>Strings</b><br>
-<sub>Text manipulation</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://img.icons8.com/fluency/96/a-lowercase.png" width="60"><br>
-<b>Characters</b><br>
-<sub>Char operations</sub>
 </td>
 <td align="center" width="20%">
 <img src="https://img.icons8.com/fluency/96/stack.png" width="60"><br>

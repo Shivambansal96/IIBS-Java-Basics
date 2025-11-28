@@ -107,21 +107,19 @@ public class DayFour {
         // System.out.println(a.length());
         // System.out.println(a.endsWith("vam."));
         // System.out.println(a.equalsIgnoreCase(b));
-        
-        
-        
         // String a = sc.next();
+
+
+
         String a = "        Shivam     ".strip();
         String b = "shIvam";
 
         System.out.println(a);
         System.out.println(a.length());
 
-
-
         System.out.println(a.equalsIgnoreCase(b));
 
-
+        System.out.println(a.length());
 
     }
 }

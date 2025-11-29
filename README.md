@@ -5,7 +5,7 @@
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active%20Learning-success?style=for-the-badge)
 ![Students](https://img.shields.io/badge/IIBS-Students-blue?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-60%25-orange?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-100%25-brightgreen?style=for-the-badge)
 
 ### 🚀 *Master Java Programming from Scratch!*
 
@@ -55,7 +55,7 @@ Test your knowledge
 
 ```
 Completed Topics:
-████████████████████░░░░░░░░░░░░ 60%
+████████████████████████████████ 100%
 
 ✅ JDK, JRE & JVM
 ✅ Output Methods
@@ -65,10 +65,9 @@ Completed Topics:
 ✅ Operators
 ✅ Conditional Statements
 ✅ Strings & Characters
-🟡 HackerRank Challenges (Started)
-⏳ Loops
-⏳ Arrays
-⏳ Functions/Methods
+✅ Loops (for, while, do-while)
+✅ Arrays
+🟡 HackerRank Challenges (In Progress)
 ```
 
 ---
@@ -83,29 +82,27 @@ graph LR
     D --> E[🔀 Conditionals]
     E --> F[🔄 Loops]
     F --> G[📚 Arrays]
-    G --> H[🎯 Functions]
-    H --> I[🏆 HackerRank]
+    G --> H[🏆 HackerRank]
     
     style A fill:#90EE90
     style B fill:#90EE90
     style C fill:#90EE90
     style D fill:#90EE90
     style E fill:#90EE90
-    style F fill:#FFD700
-    style G fill:#FFD700
+    style F fill:#90EE90
+    style G fill:#90EE90
     style H fill:#FFD700
-    style I fill:#FFD700
 ```
 
 ---
 
 ## 🔬 Fundamentals
 
-- **Completed:** `JDK, JRE & JVM`, `Output Methods`, `Variables`, `Data Types`, `User Input (Scanner)`, `Operators`, `Conditional Statements`, `Strings & Characters`
-- **In Progress:** `Loops`
-- **Planned:** `Arrays`, `Functions/Methods`, `HackerRank Challenges` (started)
+- **Completed:** `JDK, JRE & JVM`, `Output Methods`, `Variables`, `Data Types`, `User Input (Scanner)`, `Operators`, `Conditional Statements`, `Strings & Characters`, `Loops`, `Arrays`
+- **In Progress:** `HackerRank Challenges`
+- **Next Phase:** Advanced OOP, Exception Handling, Collections
 
-> Quick intro: These fundamentals are the building blocks. Focus on writing small programs that combine multiple topics (e.g., use Scanner + Operators + Conditionals).
+> Quick intro: These fundamentals are the building blocks. You've now mastered core programming concepts! Next, master problem-solving with HackerRank challenges.
 
 
 ## 📚 Topics Covered
@@ -403,6 +400,324 @@ String result = (marks >= 40) ? "Pass ✅" : "Fail ❌";
 
 </details>
 
+<details open>
+<summary><h3>🔤 8. Strings & Characters - Text Processing</h3></summary>
+
+> **Work with text data and individual characters**
+
+### **📝 String Declaration & Initialization**
+```java
+// Different ways to create strings
+String str1 = "Hello Java";           // String literal
+String str2 = new String("World");    // Using new keyword
+String str3 = "";                     // Empty string
+
+// Character vs String
+char ch = 'A';         // Single character (single quotes)
+String word = "Apple"; // String of characters (double quotes)
+```
+
+### **📏 String Length & Accessing Characters**
+```java
+String name = "Priya";
+
+// Get length
+int len = name.length();  // 5
+System.out.println("Length: " + len);
+
+// Access characters using index (0-based)
+char first = name.charAt(0);      // 'P'
+char last = name.charAt(4);       // 'a'
+char atIndex = name.charAt(2);    // 'i'
+
+System.out.println("First char: " + first);
+System.out.println("Char at index 3: " + name.charAt(3));
+```
+
+### **🔤 String Built-in Methods**
+```java
+String text = "Java Programming";
+
+// Case conversion
+System.out.println(text.toUpperCase());   // JAVA PROGRAMMING
+System.out.println(text.toLowerCase());   // java programming
+
+// Check and find
+System.out.println(text.contains("Java")); // true
+System.out.println(text.indexOf("Java"));  // 0
+System.out.println(text.indexOf("Pro"));   // 5
+System.out.println(text.indexOf("xyz"));   // -1 (not found)
+
+// Extract substring
+System.out.println(text.substring(0, 4));    // "Java"
+System.out.println(text.substring(5));       // "Programming"
+
+// Replace characters/substrings
+System.out.println(text.replace('a', '*'));        // J*v* Progr*mming
+System.out.println(text.replace("Java", "Python")); // Python Programming
+
+// Trim whitespace
+String withSpaces = "  Hello  ";
+System.out.println(withSpaces.trim());  // "Hello"
+
+// Compare strings
+String str1 = "hello";
+String str2 = "hello";
+System.out.println(str1.equals(str2));       // true (exact match)
+System.out.println(str1.equalsIgnoreCase("HELLO")); // true
+```
+
+### **🔄 Character Operations**
+```java
+String str = "Hello123";
+
+// Loop through each character
+for (int i = 0; i < str.length(); i++) {
+    char ch = str.charAt(i);
+    System.out.println(ch);
+}
+
+// Using enhanced for with toCharArray()
+for (char c : str.toCharArray()) {
+    System.out.println(c);
+}
+
+// Check character types
+String input = "Java2025";
+int digits = 0, letters = 0;
+
+for (char c : input.toCharArray()) {
+    if (Character.isDigit(c)) {
+        digits++;
+    } else if (Character.isLetter(c)) {
+        letters++;
+    }
+}
+System.out.println("Letters: " + letters + ", Digits: " + digits);
+```
+
+### **✨ Common String Operations**
+```java
+// Count occurrences
+String sentence = "banana";
+int count = 0;
+for (char c : sentence.toCharArray()) {
+    if (c == 'a') count++;
+}
+System.out.println("Count of 'a': " + count);  // 3
+
+// Reverse string
+String original = "hello";
+String reversed = "";
+for (int i = original.length() - 1; i >= 0; i--) {
+    reversed += original.charAt(i);
+}
+System.out.println("Reversed: " + reversed);  // "olleh"
+
+// Check palindrome
+String word = "racecar";
+String rev = new StringBuilder(word).reverse().toString();
+System.out.println("Palindrome: " + word.equals(rev));  // true
+
+// Convert string to array
+String str = "Java Programming";
+String[] words = str.split(" ");  // {"Java", "Programming"}
+for (String w : words) {
+    System.out.println(w);
+}
+```
+
+**💡 String Tips:**
+- Strings are immutable (cannot be changed after creation)
+- Use `equals()` for comparison, NOT `==`
+- String concatenation: `str1 + str2`
+- Empty string: `""` (length = 0)
+- `charAt()` returns char at specific index
+
+</details>
+
+</details>
+
+<details open>
+<summary><**h3**>📚 9. Arrays - Collections of Data</h3></summary>
+
+> **Store multiple values of same data type in a single variable**
+
+### **📋 Array Declaration & Initialization**
+```java
+// Method 1: Declare with size
+int[] numbers = new int[5];  // Array of 5 integers
+
+// Method 2: Declare and initialize
+int[] scores = {85, 90, 78, 92, 88};
+String[] names = {"Aarav", "Priya", "Rahul"};
+
+// Method 3: With new keyword
+double[] prices = new double[]{9.99, 15.50, 20.00};
+```
+
+### **🔍 Accessing Array Elements**
+```java
+int[] arr = {10, 20, 30, 40, 50};
+
+// Access by index (0-based)
+System.out.println(arr[0]);   // Output: 10
+System.out.println(arr[2]);   // Output: 30
+System.out.println(arr.length);  // Output: 5
+
+// Modify element
+arr[1] = 25;  // Now: {10, 25, 30, 40, 50}
+```
+
+### **🔁 Array Iteration**
+```java
+int[] marks = {85, 90, 78, 92, 88};
+
+// Using for loop
+for (int i = 0; i < marks.length; i++) {
+    System.out.println("Mark " + (i+1) + ": " + marks[i]);
+}
+
+// Using enhanced for (for-each)
+for (int mark : marks) {
+    System.out.println("Mark: " + mark);
+}
+
+// Real example: Calculate average
+int total = 0;
+for (int mark : marks) {
+    total += mark;
+}
+double average = total / marks.length;
+System.out.println("Average: " + average);
+```
+
+### **📊 Common Array Operations**
+```java
+int[] arr = {5, 2, 9, 1, 7};
+
+// Find maximum
+int max = arr[0];
+for (int i = 1; i < arr.length; i++) {
+    if (arr[i] > max) max = arr[i];
+}
+System.out.println("Max: " + max);  // 9
+
+// Find sum
+int sum = 0;
+for (int num : arr) {
+    sum += num;
+}
+System.out.println("Sum: " + sum);  // 24
+
+// Search element
+int target = 7;
+for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == target) {
+        System.out.println("Found at index: " + i);
+        break;
+    }
+}
+
+// Reverse array
+int[] reversed = new int[arr.length];
+for (int i = 0; i < arr.length; i++) {
+    reversed[i] = arr[arr.length - 1 - i];
+}
+```
+
+**💡 Array Tips:**
+- Index starts from 0
+- `arr.length` gives total elements
+- Out of bounds causes runtime error
+- Arrays are fixed size (use ArrayList for dynamic)
+
+</details>
+
+<details open>
+<summary><h3>🔄 10. Loops - Repetition Made Easy</h3></summary>
+
+> **Execute a block of code multiple times with different values**
+
+### **📍 for Loop - When you know exact iterations**
+```java
+// Print numbers 1 to 5
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Number: " + i);
+}
+
+// Print pattern
+for (int i = 1; i <= 3; i++) {
+    for (int j = 1; j <= i; j++) {
+        System.out.print("* ");
+    }
+    System.out.println();
+}
+// Output:
+// * 
+// * * 
+// * * *
+```
+
+### **🔁 while Loop - When condition controls iteration**
+```java
+int count = 1;
+while (count <= 5) {
+    System.out.println("Count: " + count);
+    count++;
+}
+
+// Real-world: Login attempts
+int attempts = 0;
+int maxAttempts = 3;
+while (attempts < maxAttempts) {
+    System.out.println("Enter password:");
+    // validate password
+    attempts++;
+}
+```
+
+### **↩️ do-while Loop - Execute at least once**
+```java
+int choice;
+do {
+    System.out.println("Menu:");
+    System.out.println("1. Add  2. Remove  3. Exit");
+    // Read choice
+    choice = sc.nextInt();
+} while (choice != 3);
+
+// Guarantee: Code runs minimum once
+int num = 0;
+do {
+    System.out.println("Enter positive number:");
+    num = sc.nextInt();
+} while (num <= 0);
+```
+
+### **🚫 Loop Control**
+```java
+// break - Exit loop immediately
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) break;  // Exit at 5
+    System.out.println(i);
+}
+
+// continue - Skip current iteration
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) continue;  // Skip 3
+    System.out.println(i);  // Prints: 1,2,4,5
+}
+```
+
+**💡 Loop Patterns:**
+- Count-controlled: `for (int i = 0; i < n; i++)`
+- Condition-controlled: `while (condition)`
+- Menu-driven: `do-while` 
+- Array iteration: `for (int i = 0; i < arr.length; i++)`
+
+</details>
+
 ---
 
 ## 💪 Exercises & Practice
@@ -586,30 +901,222 @@ Enter your choice:
 
 ---
 
+### 📋 **Assignment 4: String Manipulation & Characters** ⭐ DAY 4
+**Deadline:** [Add Date]  
+**Difficulty:** ⭐⭐⭐☆☆
+
+**Create a "String Analyzer" Program:**
+
+```java
+╔═══════════════════════════════════════╗
+║        STRING ANALYZER TOOL           ║
+╚═══════════════════════════════════════╝
+```
+
+**Features Required:**
+1. Take a string as input from user
+2. Display string operations:
+   - **Length:** `str.length()`
+   - **Uppercase:** `str.toUpperCase()`
+   - **Lowercase:** `str.toLowerCase()`
+   - **First character:** `str.charAt(0)`
+   - **Last character:** `str.charAt(str.length()-1)`
+   - **Character at index:** Ask user for index
+   - **Contains substring:** Check if string contains a word
+   - **Replace characters:** Replace all 'a' with '*'
+   - **Reverse string:** Display reversed
+   - **Count vowels:** Loop through each character
+
+**Example Output:**
+```
+Enter a string: "Java Programming"
+Length: 16
+Uppercase: JAVA PROGRAMMING
+Lowercase: java programming
+First char: J
+Last char: g
+Character at index 5: P
+Contains 'gram': true
+Replace 'a' with '*': J*v* Progr*mming
+Reversed: gnimmargorP avaJ
+Vowels: 4 (a, o, a, i)
+```
+
+**Bonus:**
+- Count consonants
+- Count special characters
+- Check if palindrome
+- Count words in string
+
+---
+
+### 📋 **Assignment 5: Array Operations with for Loop** ⭐ DAY 5
+**Deadline:** [Add Date]  
+**Difficulty:** ⭐⭐⭐⭐☆
+
+**Create an "Array Utility Tool":**
+
+```java
+╔═══════════════════════════════════════╗
+║        ARRAY OPERATIONS MENU          ║
+╚═══════════════════════════════════════╝
+```
+
+**Requirements:**
+1. Take array size from user
+2. Fill array with user input
+3. Perform operations using for loops:
+   - **Display array:** Print all elements
+   - **Find maximum:** Iterate and compare
+   - **Find minimum:** Iterate and compare
+   - **Calculate sum:** Add all elements
+   - **Calculate average:** sum / length
+   - **Find element:** Search in array
+   - **Count occurrences:** Count specific number
+   - **Reverse array:** Print in reverse
+   - **Sort array:** Implement bubble sort or simple sort
+   - **Even/Odd count:** Count even and odd elements
+
+**Example Menu:**
+```java
+1. Display Array
+2. Find Max/Min
+3. Calculate Sum & Average
+4. Search Element
+5. Count Occurrences
+6. Reverse Array
+7. Sort Array
+8. Count Even/Odd
+9. Exit
+```
+
+**Sample Output:**
+```
+Array: [5, 2, 9, 1, 7, 3, 8]
+Max: 9
+Min: 1
+Sum: 35
+Average: 5.0
+Sorted: [1, 2, 3, 5, 7, 8, 9]
+Even count: 3
+Odd count: 4
+```
+
+---
+
+### 📋 **Assignment 6: Student Grades using Loops & Arrays** ⭐ DAY 6
+**Deadline:** [Add Date]  
+**Difficulty:** ⭐⭐⭐⭐⭐
+
+**Create a "Student Grade Management System":**
+
+```java
+╔═══════════════════════════════════════╗
+║   STUDENT GRADE MANAGEMENT SYSTEM    ║
+╚═══════════════════════════════════════╝
+```
+
+**Requirements:**
+1. Use do-while for menu (guarantee run once)
+2. Use for loops for array processing
+3. Use while loop for validation
+
+**Features:**
+
+A. **Add Student Scores**
+   - Take number of students
+   - Create array for marks (5 subjects per student)
+   - Use nested for loops to fill marks
+
+B. **Display Results** (for each student)
+   ```java
+   Total Marks: [sum of 5 subjects]
+   Average: [total/5]
+   Grade: [A/B/C/D/F based on average]
+   Result: [Pass/Fail]
+   ```
+
+C. **Statistics**
+   - Highest score in class
+   - Lowest score in class
+   - Class average
+   - Pass count & Fail count
+
+**Code Structure:**
+```java
+do {
+    // Display menu
+    switch(choice) {
+        case 1: // Add scores - use for loops
+        case 2: // Calculate results - use for loops
+        case 3: // Display stats - use for loops
+        case 4: // Exit
+    }
+} while(choice != 4);
+```
+
+**Expected Output:**
+```
+╔════════════════════════════════════╗
+║      STUDENT REPORT                ║
+╠════════════════════════════════════╣
+║ Student: Aarav                     ║
+║ Marks: 85, 90, 78, 92, 88         ║
+║ Total: 433                         ║
+║ Average: 86.6                      ║
+║ Grade: A                           ║
+║ Status: ✅ PASS                    ║
+╚════════════════════════════════════╝
+
+Class Statistics:
+- Highest Score: 95
+- Lowest Score: 45
+- Class Average: 75.2
+- Passed: 28/30
+- Failed: 2/30
+```
+
+**Bonus Challenges:**
+- Use while loop for input validation
+- Implement search by student name
+- Sort students by marks
+- Display top 3 performers
+
+---
+
 ## 🎯 What's Coming Next
 
-<table>
-<tr>
-<td align="center" width="20%">
-<img src="https://img.icons8.com/fluency/96/loop.png" width="60"><br>
-<b>Loops</b><br>
-<sub>for, while, do-while</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://img.icons8.com/fluency/96/stack.png" width="60"><br>
-<b>Arrays</b><br>
-<sub>Data collections</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://img.icons8.com/fluency/96/software-box.png" width="60"><br>
-<b>Functions</b><br>
-<sub>Reusable code</sub>
-</td>
-</tr>
-</table>
-
 ### 🏆 **Final Challenge: HackerRank Coding**
-Master problem-solving with real coding challenges!
+Master problem-solving with real coding challenges on [HackerRank Java](https://www.hackerrank.com/domains/java)
+
+**Recommended Problems by Difficulty:**
+
+#### 🌱 **Easy Level**
+- Solve Me First
+- Simple Array Sum
+- Compare the Triplets
+- A Very Big Sum
+- Plus Minus
+- Staircase
+
+#### 🌿 **Medium Level**
+- Mini-Max Sum
+- Time Conversion
+- Birthday Cake Candles
+- Grading Students
+- Counting Valleys
+
+#### 🌳 **Hard Level**
+- 2D Array - DS
+- Arrays: Left Rotation
+- New Year Chaos
+
+**Tips:**
+- Start with Easy problems to build confidence
+- Read problem carefully and understand examples
+- Break problem into smaller steps
+- Test with provided examples first
+- Debug step-by-step using print statements
 
 ---
 

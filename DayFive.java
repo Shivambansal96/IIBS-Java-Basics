@@ -19,10 +19,23 @@ public class DayFive {
         // Arrays.sort(arr);
         // // Arrays.sort(arr);
         // // System.out.println(arr[0]);
+        // for (int i = 1; i < 10000; i++) {
+        //     System.out.println("Hello World");
+        // }   
 
-        for (int i = 1; i <= 4; i++) {
-            System.out.println("Today is Day " +  i +  "of Java");
-        }
+        // // // Print 1 - 100
+
+        // for (int i = 1; i <= 100; i++) {
+        //     System.out.println(i);
+        // }   
+
+
+        // for (int i = 1; i <= 4; i++) {
+        //     System.out.println("Today is Day " + i + " of Java");
+        // }
+
+
         
+
     }
 }
